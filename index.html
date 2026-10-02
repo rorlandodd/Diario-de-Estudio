@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diario de Estudio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="contenedor">
+    <h1>📚 Diario de Estudio</h1>
+
+    <!-- Racha actual -->
+    <section class="racha">
+      <span class="racha-numero" id="racha">0</span>
+      <span class="racha-texto" id="texto-racha">🔥 días seguidos estudiando</span>
+    </section>
+
+    <!-- Formulario para registrar una sesión -->
+    <section class="tarjeta">
+      <h2>Registrar sesión</h2>
+      <form id="formulario">
+        <label for="fecha">Fecha</label>
+        <input type="date" id="fecha" required>
+
+        <label for="tema">Tema</label>
+        <input type="text" id="tema" placeholder="¿Qué has estudiado?" required>
+
+        <label for="minutos">Minutos</label>
+        <input type="number" id="minutos" min="1" placeholder="30" required>
+
+        <button type="submit">Guardar sesión</button>
+      </form>
+    </section>
+
+    <!-- Lista de sesiones -->
+    <section class="tarjeta">
+      <h2>Sesiones</h2>
+      <ul class="lista-sesiones" id="lista-sesiones"></ul>
+      <p class="mensaje-vacio" id="mensaje-vacio">Todavía no hay sesiones. ¡Registra la primera!</p>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
